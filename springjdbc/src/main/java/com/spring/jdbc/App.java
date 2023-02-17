@@ -1,12 +1,14 @@
 package com.spring.jdbc;
 
+import java.util.List;
+
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.spring.jdbc.dao.StudentDao;
 import com.spring.jdbc.entities.Student;
-
+//all these were used using the xml
 public class App {
 public static void main(String[] args) {
 	System.out.println("My program started");
@@ -29,8 +31,10 @@ public static void main(String[] args) {
 	
 	
 	//this for fetching the single object
-	Student student=studentDao.getStudent(456);
-	System.out.println(student);
+//	Student student=studentDao.getStudent(456);
+	
+	List<Student> students=studentDao.getAllStudent();
+	System.out.println(students);
 	
 }
 }
