@@ -1,0 +1,17 @@
+create database springjdbc;
+use springjdbc;
+
+create table student
+( 
+ id int primary key,
+ name varchar(100) not null,
+ city varchar(200)
+ );
+ 
+
+show tables;
+
+insert into student(id,name,city) values(1,"Roshan Singh","Delhi");
+select * from student;
+
+desc student;
